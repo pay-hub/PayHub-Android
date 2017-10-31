@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.payhub.demo.MainActivity"
+    android:orientation="vertical"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:gravity="center">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:text="金额(分)："
+            />
+
+        <EditText
+            android:id="@+id/edt_amount"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="6"
+            android:hint="单位（分）"
+            android:textSize="14sp"
+            android:text="100"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:gravity="center">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:text="商户ID："
+            />
+
+        <EditText
+            android:id="@+id/edt_merchant_id"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="6"
+            android:textSize="14sp"
+            android:text="2"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:gravity="center">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:text="用户ID："
+            />
+
+        <EditText
+            android:id="@+id/edt_user_id"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="6"
+            android:textSize="14sp"
+            android:text="6"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:gravity="center">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:text="回调地址："
+            />
+
+        <EditText
+            android:id="@+id/edt_webhook_url"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="6"
+            android:textSize="14sp"
+            android:text="test.com"/>
+
+    </LinearLayout>
+    <RadioGroup
+        android:id="@+id/rg_channel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RadioButton
+            android:id="@+id/rb_un_pay"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="银联支付"
+            android:checked="true"/>
+        <RadioButton
+            android:id="@+id/rb_wx_pay"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="微信支付"/>
+        <RadioButton
+            android:id="@+id/rb_ali_pay"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="支付宝支付"/>
+
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btn"
+        android:text="支付"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>
