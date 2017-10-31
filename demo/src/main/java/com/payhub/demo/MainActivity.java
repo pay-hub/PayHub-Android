@@ -38,7 +38,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         //配置参数
         payParam = new PayHub.PayParam();
+        // 支付渠道
         payParam.pay_channel = PayChannel.UN_H5;
+//        // 商户 ID
+//        payParam.merchant_id ="";
+//        // 用户ID
+//        payParam.user_id =  "";
+//        // 回调地址
+//        payParam.webhook_url ="";
+//        // 支付金额
+//        payParam.amount = 0;
 
         btn.setOnClickListener(this);
         rgChannel.setOnCheckedChangeListener(this);
