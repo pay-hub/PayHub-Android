@@ -6,7 +6,7 @@ PayHub-Android SDK 提供两种接入方式：aar接入（推荐）、jar接入
 
 ### AAR接入
 
-1. 拷贝 `payhubSDK.aar` 文件到项目 `lib` 目录
+1. 拷贝 `PayHubSDK.aar` 文件到项目 `lib` 目录
 2. 配置项目 `build.gradle` 文件
 	* 在 `android{}` 标签内添加如下代码
 	
@@ -62,11 +62,18 @@ PayHub-Android SDK 提供两种接入方式：aar接入（推荐）、jar接入
 
 ### 初始化
 
-在需要调用的 `Activity `中 调用初始化代码
+在需要调用支付的 `Activity `中 调用初始化代码
 
 ```
- //初始化 app_id app_secret
- PayHub.getInstance(this).init(app_id, app_secret);
+// app_id app_secret
+String app_id = "Pt0OWdb36WMuGhYq";
+String app_secret = "19tZWvZ6JVN7awt2XASWA0VTyJvpK9qX";
+
+//MD5 加密
+String sign = EncryptUtils.md5(app_id+app_secret);
+
+//初始化 app_id sign
+PayHub.getInstance(this).init(app_id, sign);
 ```
 
 ### 参数配置

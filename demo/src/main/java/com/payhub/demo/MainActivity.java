@@ -33,8 +33,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         edtWebHookUrl = (EditText) findViewById(R.id.edt_webhook_url);
         rgChannel = (RadioGroup) findViewById(R.id.rg_channel);
 
-        //初始化 app_id app_secret
-        PayHub.getInstance(this).init("Pt0OWdb36WMuGhYq","19tZWvZ6JVN7awt2XASWA0VTyJvpK9qX");
+        // app_id app_secret
+        String app_id = "Pt0OWdb36WMuGhYq";
+        String app_secret = "19tZWvZ6JVN7awt2XASWA0VTyJvpK9qX";
+
+        String sign = EncryptUtils.md5(app_id+app_secret);
+
+        //初始化 app_id sign
+        PayHub.getInstance(this).init(app_id, sign);
 
         //配置参数
         payParam = new PayHub.PayParam();
